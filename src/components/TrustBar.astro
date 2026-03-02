@@ -27,9 +27,23 @@
 <style>
   .trust {
     padding: 4rem 0;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    border-top: none;
+    border-bottom: none;
+    position: relative;
   }
+
+  .trust::before,
+  .trust::after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+  }
+
+  .trust::before { top: 0; }
+  .trust::after { bottom: 0; }
 
   .trust-inner {
     display: flex;
@@ -56,10 +70,10 @@
   }
 
   .trust-stat .num {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--white);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
   }
 
   .trust-stat .num span {

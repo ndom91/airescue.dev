@@ -58,6 +58,25 @@
     transition: color 0.15s;
   }
 
+  .nav-right a:not(.btn) {
+    position: relative;
+  }
+
+  .nav-right a:not(.btn)::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--accent);
+    transition: width 0.2s ease;
+  }
+
+  .nav-right a:not(.btn):hover::after {
+    width: 100%;
+  }
+
   .nav-right a:hover {
     color: var(--white);
   }

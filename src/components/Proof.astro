@@ -31,6 +31,9 @@
   .proof {
     padding: 7rem 0;
     border-top: 1px solid var(--border);
+    animation: fadeSlideIn ease both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 20%;
   }
 
   .proof-grid {
@@ -43,10 +46,35 @@
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 2rem;
+    padding: 2.5rem 2rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s;
+  }
+
+  .proof-card::before {
+    content: '\201C';
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    font-size: 7rem;
+    font-family: 'Plus Jakarta Sans', serif;
+    font-weight: 800;
+    color: rgba(212, 255, 43, 0.06);
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .proof-card:hover {
+    border-color: var(--accent-mid);
+  }
+
+  .proof-card:nth-child(2) {
+    transform: translateY(-8px);
+    border-color: var(--accent-mid);
   }
 
   .proof-card blockquote {
@@ -54,6 +82,8 @@
     color: var(--text);
     line-height: 1.7;
     margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
   }
 
   .proof-card blockquote strong {
@@ -76,6 +106,10 @@
   @media (max-width: 900px) {
     .proof-grid {
       grid-template-columns: 1fr;
+    }
+
+    .proof-card:nth-child(2) {
+      transform: none;
     }
   }
 </style>

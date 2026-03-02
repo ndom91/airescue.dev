@@ -77,6 +77,9 @@
   .transform {
     padding: 7rem 0;
     border-top: 1px solid var(--border);
+    animation: fadeSlideIn ease both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 20%;
   }
 
   .transform-grid {
@@ -89,6 +92,12 @@
     border: 1px solid var(--border);
     border-radius: 10px;
     overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
+  }
+
+  .transform-panel:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   }
 
   .transform-panel-head {
@@ -98,6 +107,19 @@
     align-items: center;
     border-bottom: 1px solid var(--border);
     background: var(--surface);
+  }
+
+  .transform-panel-head::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-dim);
+    box-shadow: 14px 0 0 var(--text-dim), 28px 0 0 var(--text-dim);
+    opacity: 0.3;
+    margin-right: 1rem;
+    flex-shrink: 0;
   }
 
   .transform-panel-head span {
@@ -113,6 +135,7 @@
     text-transform: uppercase;
     padding: 0.15rem 0.55rem;
     border-radius: 3px;
+    flex-shrink: 0;
   }
 
   .tag-red {

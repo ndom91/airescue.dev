@@ -14,8 +14,19 @@
 
 <style>
   footer {
-    border-top: 1px solid var(--border);
-    padding: 2rem 0;
+    border-top: none;
+    padding: 3rem 0;
+    position: relative;
+  }
+
+  footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
   }
 
   .footer-inner {
@@ -34,9 +45,10 @@
   .footer-links a {
     color: var(--text-dim);
     text-decoration: none;
+    transition: color 0.2s;
   }
 
   .footer-links a:hover {
-    color: var(--white);
+    color: var(--accent);
   }
 </style>

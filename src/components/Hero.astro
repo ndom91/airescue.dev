@@ -11,9 +11,49 @@
 </div>
 
 <style>
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(rgba(212, 255, 43, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(212, 255, 43, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: linear-gradient(to bottom, black 40%, transparent 90%);
+    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 90%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
   .hero {
     padding: 11rem 0 6rem;
     max-width: 720px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin-bottom: 1.5rem;
+    border-radius: 1px;
   }
 
   .hero-eyebrow {
@@ -22,19 +62,32 @@
     color: var(--accent);
     margin-bottom: 1.5rem;
     letter-spacing: 0.02em;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  }
+
+  .hero-eyebrow::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 2px;
+    color: var(--accent);
+    animation: blink 1s step-end infinite;
   }
 
   .hero h1 {
-    font-size: clamp(2.75rem, 6.5vw, 4.75rem);
+    font-size: clamp(3.5rem, 8vw, 6.5rem);
     font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -0.035em;
+    line-height: 0.95;
+    letter-spacing: -0.045em;
     color: var(--white);
-    margin-bottom: 1.75rem;
+    margin-bottom: 2rem;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
   }
 
   .hero h1 .dim {
-    color: var(--text-dim);
+    background: linear-gradient(180deg, var(--text-dim) 0%, rgba(113, 113, 122, 0.35) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .hero-desc {
@@ -43,16 +96,22 @@
     max-width: 520px;
     margin-bottom: 2.5rem;
     line-height: 1.7;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
   }
 
   .hero-actions {
     display: flex;
     gap: 0.75rem;
+    animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
   }
 
   @media (max-width: 600px) {
     .hero {
       padding: 8rem 0 4rem;
+    }
+
+    .hero h1 {
+      line-height: 1;
     }
 
     .hero-actions {

@@ -11,9 +11,22 @@
 
 <style>
   .cta {
-    padding: 8rem 0;
+    padding: 10rem 0 8rem;
     text-align: center;
-    border-top: 1px solid var(--border);
+    position: relative;
+    animation: fadeSlideIn ease both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 20%;
+  }
+
+  .cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent-mid), transparent);
   }
 
   .cta h2 {
@@ -26,7 +39,10 @@
   }
 
   .cta h2 .accent {
-    color: var(--accent);
+    background: linear-gradient(135deg, var(--accent), #a8ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .cta p {
