@@ -41,7 +41,7 @@
 
 <style>
   .problems {
-    padding: 7rem 0;
+    padding: 9rem 0 7rem;
     animation: fadeSlideIn ease both;
     animation-timeline: view();
     animation-range: entry 0% entry 20%;
@@ -99,20 +99,25 @@
 
   .problem-card .num {
     font-family: 'DM Mono', monospace;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 500;
-    color: rgba(212, 255, 43, 0.06);
+    color: rgba(212, 255, 43, 0.04);
     margin-bottom: 1rem;
     line-height: 1;
     letter-spacing: -0.05em;
+    transition: color 0.3s;
+  }
+
+  .problem-card:hover .num {
+    color: rgba(212, 255, 43, 0.12);
   }
 
   .problem-card h3 {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 700;
     color: var(--white);
     margin-bottom: 0.5rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .problem-card p {

@@ -1,41 +1,56 @@
-<div class="container">
-  <section class="cta">
-    <h2>Ready for code you can trust?<br>Start <span class="accent">shipping.</span></h2>
-    <p>You built something worth investing in. Let's give it the engineering foundation it deserves.</p>
-    <div class="cta-actions">
-      <a href="#" class="btn btn-accent">Get a free assessment &rarr;</a>
-      <a href="#" class="btn btn-ghost">View case studies</a>
+<section class="cta-section">
+  <div class="container">
+    <div class="cta">
+      <div class="cta-eyebrow">// let's talk</div>
+      <h2>Ready for code you can trust?<br>Start <span class="accent">shipping.</span></h2>
+      <p>You built something worth investing in. Let's give it the engineering foundation it deserves.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-accent btn-lg">Get a free assessment &rarr;</a>
+        <a href="#" class="btn btn-ghost">View case studies</a>
+      </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
 
 <style>
-  .cta {
-    padding: 10rem 0 8rem;
-    text-align: center;
+  .cta-section {
+    background: var(--surface);
     position: relative;
     animation: fadeSlideIn ease both;
     animation-timeline: view();
     animation-range: entry 0% entry 20%;
   }
 
-  .cta::before {
+  .cta-section::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 10%;
-    right: 10%;
+    left: 0;
+    right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--accent-mid), transparent);
+    background: linear-gradient(90deg, transparent 5%, var(--accent-mid) 50%, transparent 95%);
+  }
+
+  .cta {
+    padding: 10rem 0 8rem;
+    text-align: center;
+  }
+
+  .cta-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
   }
 
   .cta h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2.25rem, 5.5vw, 4rem);
     font-weight: 800;
     color: var(--white);
-    letter-spacing: -0.035em;
-    line-height: 1.1;
-    margin-bottom: 1.25rem;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
   }
 
   .cta h2 .accent {
@@ -46,10 +61,10 @@
   }
 
   .cta p {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     color: var(--text-dim);
-    max-width: 460px;
-    margin: 0 auto 2.5rem;
+    max-width: 480px;
+    margin: 0 auto 3rem;
     line-height: 1.7;
   }
 
@@ -57,6 +72,11 @@
     display: flex;
     gap: 0.75rem;
     justify-content: center;
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.95rem;
   }
 
   @media (max-width: 600px) {

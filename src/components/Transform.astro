@@ -5,7 +5,7 @@
       <h2>What rescue actually looks like</h2>
     </div>
     <div class="transform-grid">
-      <div class="transform-panel">
+      <div class="transform-panel panel-before">
         <div class="transform-panel-head">
           <span>your-project/</span>
           <span class="tag tag-red">Before</span>
@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-      <div class="transform-panel">
+      <div class="transform-panel panel-after">
         <div class="transform-panel-head">
           <span>your-project/</span>
           <span class="tag tag-green">After</span>
@@ -75,7 +75,7 @@
 
 <style>
   .transform {
-    padding: 7rem 0;
+    padding: 5rem 0 7rem;
     border-top: 1px solid var(--border);
     animation: fadeSlideIn ease both;
     animation-timeline: view();
@@ -100,6 +100,22 @@
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   }
 
+  .panel-before {
+    border-color: rgba(239, 68, 68, 0.15);
+  }
+
+  .panel-after {
+    border-color: rgba(212, 255, 43, 0.15);
+  }
+
+  .panel-before:hover {
+    border-color: rgba(239, 68, 68, 0.3);
+  }
+
+  .panel-after:hover {
+    border-color: rgba(212, 255, 43, 0.3);
+  }
+
   .transform-panel-head {
     padding: 0.75rem 1.25rem;
     display: flex;
@@ -120,6 +136,18 @@
     opacity: 0.3;
     margin-right: 1rem;
     flex-shrink: 0;
+  }
+
+  .panel-before .transform-panel-head::before {
+    background: #f87171;
+    box-shadow: 14px 0 0 var(--text-dim), 28px 0 0 var(--text-dim);
+    opacity: 0.5;
+  }
+
+  .panel-after .transform-panel-head::before {
+    background: var(--accent);
+    box-shadow: 14px 0 0 var(--text-dim), 28px 0 0 var(--text-dim);
+    opacity: 0.5;
   }
 
   .transform-panel-head span {

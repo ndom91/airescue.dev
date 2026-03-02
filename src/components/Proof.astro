@@ -40,6 +40,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
+    align-items: start;
   }
 
   .proof-card {
@@ -52,7 +53,7 @@
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, transform 0.3s;
   }
 
   .proof-card::before {
@@ -60,27 +61,37 @@
     position: absolute;
     top: -10px;
     left: 16px;
-    font-size: 7rem;
+    font-size: 8rem;
     font-family: 'Plus Jakarta Sans', serif;
     font-weight: 800;
-    color: rgba(212, 255, 43, 0.06);
+    color: rgba(212, 255, 43, 0.05);
     line-height: 1;
     pointer-events: none;
+    transition: color 0.3s;
   }
 
   .proof-card:hover {
     border-color: var(--accent-mid);
+    transform: translateY(-4px);
+  }
+
+  .proof-card:hover::before {
+    color: rgba(212, 255, 43, 0.1);
   }
 
   .proof-card:nth-child(2) {
-    transform: translateY(-8px);
+    transform: translateY(-12px);
     border-color: var(--accent-mid);
   }
 
+  .proof-card:nth-child(2):hover {
+    transform: translateY(-16px);
+  }
+
   .proof-card blockquote {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: var(--text);
-    line-height: 1.7;
+    line-height: 1.75;
     margin-bottom: 1.5rem;
     position: relative;
     z-index: 1;
@@ -110,6 +121,10 @@
 
     .proof-card:nth-child(2) {
       transform: none;
+    }
+
+    .proof-card:nth-child(2):hover {
+      transform: translateY(-4px);
     }
   }
 </style>

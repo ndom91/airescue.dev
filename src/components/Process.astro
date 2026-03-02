@@ -6,29 +6,33 @@
     </div>
     <div class="process-track">
       <div class="process-step">
+        <div class="step-num">01</div>
         <div class="step-dot"></div>
-        <div class="step-label">01 Intake</div>
+        <div class="step-label">Intake</div>
         <h3>Share your repo</h3>
         <p>Send us a link and describe what's broken. We respond within 2 hours with an honest assessment.</p>
         <span class="time">~2 hours</span>
       </div>
       <div class="process-step">
+        <div class="step-num">02</div>
         <div class="step-dot"></div>
-        <div class="step-label">02 Diagnose</div>
+        <div class="step-label">Diagnose</div>
         <h3>Deep code audit</h3>
         <p>A senior engineer reads every file, maps the architecture, and documents every issue with a prioritized fix plan.</p>
         <span class="time">~24 hours</span>
       </div>
       <div class="process-step">
+        <div class="step-num">03</div>
         <div class="step-dot"></div>
-        <div class="step-label">03 Operate</div>
+        <div class="step-label">Operate</div>
         <h3>Fix, refactor, test</h3>
         <p>We fix critical bugs first, then restructure, then add tests and docs. You get daily progress updates.</p>
         <span class="time">~5-8 days</span>
       </div>
       <div class="process-step">
+        <div class="step-num">04</div>
         <div class="step-dot"></div>
-        <div class="step-label">04 Handoff</div>
+        <div class="step-label">Handoff</div>
         <h3>You own it</h3>
         <p>Walkthrough call, full documentation, and 2 weeks of support. Clean, tested code that your team can maintain.</p>
         <span class="time">~1hr + 2 weeks</span>
@@ -44,7 +48,7 @@
   }
 
   .process {
-    padding: 7rem 0;
+    padding: 7rem 0 9rem;
     border-top: 1px solid var(--border);
     animation: fadeSlideIn ease both;
     animation-timeline: view();
@@ -65,7 +69,7 @@
   .process-step::before {
     content: '';
     position: absolute;
-    top: 2.2rem;
+    top: 4.5rem;
     left: 0;
     right: 0;
     height: 1px;
@@ -81,12 +85,22 @@
     width: 1rem;
   }
 
+  .step-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: rgba(212, 255, 43, 0.06);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    margin-bottom: 0.5rem;
+  }
+
   .step-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background: var(--accent);
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     position: relative;
     z-index: 1;
   }
@@ -107,16 +121,18 @@
   .process-step .step-label {
     font-family: 'DM Mono', monospace;
     font-size: 0.7rem;
-    color: var(--text-dim);
-    margin-bottom: 0.75rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   .process-step h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--white);
     margin-bottom: 0.5rem;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .process-step p {

@@ -1,52 +1,55 @@
-<div class="container" id="pricing">
-  <section class="pricing">
-    <div class="section-header">
-      <div class="eyebrow">// pricing</div>
-      <h2>Flat rate. No hourly surprises.</h2>
+<section class="pricing-section">
+  <div class="container" id="pricing">
+    <div class="pricing">
+      <div class="section-header pricing-header">
+        <div class="eyebrow">// pricing</div>
+        <h2>Flat rate. No hourly surprises.</h2>
+        <p class="pricing-subtitle">Every project is different, but our pricing isn't a mystery.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="tier">Diagnostic</div>
+          <div class="price">$499</div>
+          <div class="price-sub">One-time audit</div>
+          <ul>
+            <li>Full codebase review</li>
+            <li>Architecture analysis</li>
+            <li>Security vulnerability scan</li>
+            <li>Prioritized fix plan</li>
+            <li>30-min walkthrough call</li>
+          </ul>
+          <a href="#" class="btn btn-ghost btn-full">Book diagnostic</a>
+        </div>
+        <div class="pricing-card featured">
+          <div class="tier">Full Rescue</div>
+          <div class="price">$2,999</div>
+          <div class="price-sub">Complete repair, 5&ndash;10 days</div>
+          <ul>
+            <li>Everything in Diagnostic</li>
+            <li>Complete code refactoring</li>
+            <li>Test suite + CI/CD setup</li>
+            <li>Documentation</li>
+            <li>2 weeks post-delivery support</li>
+          </ul>
+          <a href="#" class="btn btn-accent btn-full">Start rescue &rarr;</a>
+        </div>
+        <div class="pricing-card">
+          <div class="tier">Retainer</div>
+          <div class="price">$999<span class="price-mo">/mo</span></div>
+          <div class="price-sub">Ongoing safety net</div>
+          <ul>
+            <li>Weekly code reviews</li>
+            <li>Priority rescue queue</li>
+            <li>Architecture consulting</li>
+            <li>AI workflow coaching</li>
+            <li>Dedicated Slack channel</li>
+          </ul>
+          <a href="#" class="btn btn-ghost btn-full">Get retainer</a>
+        </div>
+      </div>
     </div>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="tier">Diagnostic</div>
-        <div class="price">$499</div>
-        <div class="price-sub">One-time audit</div>
-        <ul>
-          <li>Full codebase review</li>
-          <li>Architecture analysis</li>
-          <li>Security vulnerability scan</li>
-          <li>Prioritized fix plan</li>
-          <li>30-min walkthrough call</li>
-        </ul>
-        <a href="#" class="btn btn-ghost btn-full">Book diagnostic</a>
-      </div>
-      <div class="pricing-card featured">
-        <div class="tier">Full Rescue</div>
-        <div class="price">$2,999</div>
-        <div class="price-sub">Complete repair, 5&ndash;10 days</div>
-        <ul>
-          <li>Everything in Diagnostic</li>
-          <li>Complete code refactoring</li>
-          <li>Test suite + CI/CD setup</li>
-          <li>Documentation</li>
-          <li>2 weeks post-delivery support</li>
-        </ul>
-        <a href="#" class="btn btn-accent btn-full">Start rescue &rarr;</a>
-      </div>
-      <div class="pricing-card">
-        <div class="tier">Retainer</div>
-        <div class="price">$999<span class="price-mo">/mo</span></div>
-        <div class="price-sub">Ongoing safety net</div>
-        <ul>
-          <li>Weekly code reviews</li>
-          <li>Priority rescue queue</li>
-          <li>Architecture consulting</li>
-          <li>AI workflow coaching</li>
-          <li>Dedicated Slack channel</li>
-        </ul>
-        <a href="#" class="btn btn-ghost btn-full">Get retainer</a>
-      </div>
-    </div>
-  </section>
-</div>
+  </div>
+</section>
 
 <style>
   @property --angle {
@@ -59,12 +62,32 @@
     to { --angle: 360deg; }
   }
 
+  .pricing-section {
+    background: var(--surface);
+  }
+
   .pricing {
-    padding: 7rem 0;
+    padding: 9rem 0 7rem;
     border-top: 1px solid var(--border);
     animation: fadeSlideIn ease both;
     animation-timeline: view();
     animation-range: entry 0% entry 20%;
+  }
+
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .pricing-header h2 {
+    margin: 0 auto;
+  }
+
+  .pricing-subtitle {
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-top: 0.75rem;
+    line-height: 1.6;
   }
 
   .pricing-grid {
@@ -80,7 +103,7 @@
     padding: 2.25rem;
     display: flex;
     flex-direction: column;
-    background: var(--surface);
+    background: var(--bg);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s;
   }
 
@@ -92,13 +115,13 @@
   .pricing-card.featured {
     border: 1px solid transparent;
     background:
-      linear-gradient(var(--surface), var(--surface)) padding-box,
+      linear-gradient(var(--bg), var(--bg)) padding-box,
       conic-gradient(from var(--angle), var(--accent), transparent 40%, var(--accent)) border-box;
     animation: rotate-border 4s linear infinite;
     transform: scale(1.03);
     position: relative;
     z-index: 1;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
   }
 
   .pricing-card.featured::before {
