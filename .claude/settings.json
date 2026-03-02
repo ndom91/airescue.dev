@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rg:*)",
+      "Bash(grep:*)",
+      "Bash(git log:*)",
+      "Bash(find:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:api.github.com)",
+      "Bash(pnpm install)",
+      "Bash(pnpm typecheck)",
+      "Bash(pnpm run typecheck*)",
+      "Bash(pnpm test:*)",
+      "Bash(pnpm run test:*)",
+      "Bash(pnpm format:*)",
+      "Bash(pnpm run format:*)",
+      "Bash(pnpm codegen)",
+      "Bash(pnpm run codegen)",
+      "Bash(pnpm lint:*)",
+      "Bash(pnpm run lint:*)"
+    ],
+    "deny": ["Read(./.env)", "Read(./.env.*)"],
+    "ask": ["Bash(curl:*)", "Bash(git push:*)", "Bash(git commit:*)"]
+  }
+}
