@@ -4,9 +4,6 @@ Landing page for [AIrescue.dev](https://airescue.dev) — we turn AI-generated c
 
 ![](./.github/assets/screenshot.png)
 
-## Stack
-
-Astro 5 · TypeScript · No client-side JS
 
 ## Development
 
@@ -16,3 +13,7 @@ pnpm dev       # localhost:4321
 pnpm build     # static output → dist/
 pnpm preview   # preview production build
 ```
+
+## License
+
+MIT
