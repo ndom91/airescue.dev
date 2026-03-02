@@ -1,0 +1,81 @@
+<div class="container">
+  <section class="proof">
+    <div class="section-header">
+      <div class="eyebrow">// from our clients</div>
+      <h2>They were stuck too</h2>
+    </div>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <blockquote>"I spent 3 weeks in a prompt loop. Every fix created new bugs. AIrescue <strong>fixed everything in 4 days</strong> and I finally understand my own codebase."</blockquote>
+        <div class="proof-author">
+          <strong>Alex T.</strong> &middot; Solo Founder
+        </div>
+      </div>
+      <div class="proof-card">
+        <blockquote>"Our contractor vibe-coded the entire backend. When they left, we were stuck. AIrescue <strong>made the code ours again</strong>&mdash;with tests, types, and documentation."</blockquote>
+        <div class="proof-author">
+          <strong>Priya K.</strong> &middot; Startup CTO
+        </div>
+      </div>
+      <div class="proof-card">
+        <blockquote>"They found <strong>SQL injection in production</strong>. The AI had generated raw query strings everywhere. That alone was worth 10x the price."</blockquote>
+        <div class="proof-author">
+          <strong>Marcus J.</strong> &middot; Engineering Lead
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .proof {
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .proof-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .proof-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .proof-card blockquote {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .proof-card blockquote strong {
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .proof-author {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .proof-author strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  @media (max-width: 900px) {
+    .proof-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

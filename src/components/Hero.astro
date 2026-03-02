@@ -1,0 +1,62 @@
+<div class="container">
+  <section class="hero">
+    <div class="hero-eyebrow">// for codebases that AI built and AI can't fix</div>
+    <h1>Vibe coded it.<br><span class="dim">Now it's broken.</span></h1>
+    <p class="hero-desc">You shipped fast with AI. Now you're stuck in a loop of prompts that make things worse. We're the engineers who actually understand the code and fix it properly.</p>
+    <div class="hero-actions">
+      <a href="#" class="btn btn-accent">Get a free assessment &rarr;</a>
+      <a href="#services" class="btn btn-ghost">What we fix</a>
+    </div>
+  </section>
+</div>
+
+<style>
+  .hero {
+    padding: 11rem 0 6rem;
+    max-width: 720px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.75rem, 6.5vw, 4.75rem);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.035em;
+    color: var(--white);
+    margin-bottom: 1.75rem;
+  }
+
+  .hero h1 .dim {
+    color: var(--text-dim);
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    max-width: 520px;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      padding: 8rem 0 4rem;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,181 @@
+<div class="container">
+  <section class="transform">
+    <div class="section-header">
+      <div class="eyebrow">// before &amp; after</div>
+      <h2>What rescue actually looks like</h2>
+    </div>
+    <div class="transform-grid">
+      <div class="transform-panel">
+        <div class="transform-panel-head">
+          <span>your-project/</span>
+          <span class="tag tag-red">Before</span>
+        </div>
+        <div class="transform-panel-body">
+          <div class="t-row">
+            <div class="t-icon t-icon-bad">&#10005;</div>
+            <div><span class="label">847 files</span> <span class="desc">&mdash; 40% unused or duplicated</span></div>
+          </div>
+          <div class="t-row">
+            <div class="t-icon t-icon-bad">&#10005;</div>
+            <div><span class="label">0 tests</span> <span class="desc">&mdash; no types, no linting</span></div>
+          </div>
+          <div class="t-row">
+            <div class="t-icon t-icon-bad">&#10005;</div>
+            <div><span class="label">12 circular deps</span> <span class="desc">&mdash; cryptic runtime errors</span></div>
+          </div>
+          <div class="t-row">
+            <div class="t-icon t-icon-bad">&#10005;</div>
+            <div><span class="label">SQL injection</span> <span class="desc">&mdash; in 3 endpoints</span></div>
+          </div>
+          <div class="t-row">
+            <div class="t-icon t-icon-bad">&#10005;</div>
+            <div><span class="label">No error handling</span> <span class="desc">&mdash; crashes silently</span></div>
+          </div>
+          <div class="t-row">
+            <div class="t-icon t-icon-bad">&#10005;</div>
+            <div><span class="label">8s page load</span> <span class="desc">&mdash; no code splitting</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="transform-panel">
+        <div class="transform-panel-head">
+          <span>your-project/</span>
+          <span class="tag tag-green">After</span>
+        </div>
+        <div class="transform-panel-body">
+          <div class="t-row">
+            <div class="t-icon t-icon-good">&#10003;</div>
+            <div><span class="label">312 files</span> <span class="desc">&mdash; clean module boundaries</span></div>
+          </div>
+          <div class="t-row">
+            <div class="t-icon t-icon-good">&#10003;</div>
+            <div><span class="label">94% coverage</span> <span class="desc">&mdash; strict TS, ESLint, Prettier</span></div>
+          </div>
+          <div class="t-row">
+            <div class="t-icon t-icon-good">&#10003;</div>
+            <div><span class="label">0 circular deps</span> <span class="desc">&mdash; clear dependency graph</span></div>
+          </div>
+          <div class="t-row">
+            <div class="t-icon t-icon-good">&#10003;</div>
+            <div><span class="label">Parameterized queries</span> <span class="desc">&mdash; input validated</span></div>
+          </div>
+          <div class="t-row">
+            <div class="t-icon t-icon-good">&#10003;</div>
+            <div><span class="label">Structured errors</span> <span class="desc">&mdash; with monitoring</span></div>
+          </div>
+          <div class="t-row">
+            <div class="t-icon t-icon-good">&#10003;</div>
+            <div><span class="label">1.2s load</span> <span class="desc">&mdash; Lighthouse 97</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .transform {
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .transform-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+
+  .transform-panel {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .transform-panel-head {
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .transform-panel-head span {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+  }
+
+  .tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.55rem;
+    border-radius: 3px;
+  }
+
+  .tag-red {
+    background: rgba(239, 68, 68, 0.12);
+    color: #f87171;
+  }
+
+  .tag-green {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .transform-panel-body {
+    padding: 1.25rem;
+  }
+
+  .t-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+  }
+
+  .t-row + .t-row {
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+  }
+
+  .t-icon {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.6rem;
+    position: relative;
+    top: 2px;
+  }
+
+  .t-icon-bad {
+    background: rgba(239, 68, 68, 0.1);
+    color: #f87171;
+  }
+
+  .t-icon-good {
+    background: var(--accent-dim);
+    color: var(--accent);
+  }
+
+  .t-row .label {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .t-row .desc {
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 900px) {
+    .transform-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

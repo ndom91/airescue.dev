@@ -1,0 +1,134 @@
+<div class="container" id="process">
+  <section class="process">
+    <div class="section-header">
+      <div class="eyebrow">// how it works</div>
+      <h2>Four steps to a codebase you actually own</h2>
+    </div>
+    <div class="process-track">
+      <div class="process-step">
+        <div class="step-dot"></div>
+        <div class="step-label">01 Intake</div>
+        <h3>Share your repo</h3>
+        <p>Send us a link and describe what's broken. We respond within 2 hours with an honest assessment.</p>
+        <span class="time">~2 hours</span>
+      </div>
+      <div class="process-step">
+        <div class="step-dot"></div>
+        <div class="step-label">02 Diagnose</div>
+        <h3>Deep code audit</h3>
+        <p>A senior engineer reads every file, maps the architecture, and documents every issue with a prioritized fix plan.</p>
+        <span class="time">~24 hours</span>
+      </div>
+      <div class="process-step">
+        <div class="step-dot"></div>
+        <div class="step-label">03 Operate</div>
+        <h3>Fix, refactor, test</h3>
+        <p>We fix critical bugs first, then restructure, then add tests and docs. You get daily progress updates.</p>
+        <span class="time">~5-8 days</span>
+      </div>
+      <div class="process-step">
+        <div class="step-dot"></div>
+        <div class="step-label">04 Handoff</div>
+        <h3>You own it</h3>
+        <p>Walkthrough call, full documentation, and 2 weeks of support. Clean, tested code that your team can maintain.</p>
+        <span class="time">~1hr + 2 weeks</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .process {
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .process-track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+
+  .process-step {
+    padding: 0 2rem 0 0;
+    position: relative;
+  }
+
+  .process-step::before {
+    content: '';
+    position: absolute;
+    top: 2.2rem;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .process-step:first-child::before {
+    left: 1rem;
+  }
+
+  .process-step:last-child::before {
+    right: unset;
+    width: 1rem;
+  }
+
+  .step-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .process-step .step-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-bottom: 0.75rem;
+  }
+
+  .process-step h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .process-step p {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    line-height: 1.65;
+  }
+
+  .process-step .time {
+    display: inline-block;
+    margin-top: 1rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    padding: 0.2rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 3px;
+  }
+
+  @media (max-width: 900px) {
+    .process-track {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .process-step::before {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .process-track {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

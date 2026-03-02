@@ -1,0 +1,93 @@
+<div class="container" id="services">
+  <section class="problems">
+    <div class="section-header">
+      <div class="eyebrow">// what went wrong</div>
+      <h2>The six patterns we see in every vibe-coded project</h2>
+    </div>
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="num">01</div>
+        <h3>Architectural chaos</h3>
+        <p>No separation of concerns. Business logic in UI components. API calls scattered everywhere. We restructure into layers that make sense.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">02</div>
+        <h3>Security gaps</h3>
+        <p>Raw SQL strings, hardcoded secrets, broken auth. AI doesn't think about attackers. We patch every vulnerability and add real safeguards.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">03</div>
+        <h3>Dependency bloat</h3>
+        <p>47 packages where 20 lines of code would do. Conflicting versions, abandoned libraries. We trim the dead weight and update what stays.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">04</div>
+        <h3>Silent failures</h3>
+        <p>Empty catch blocks. Functions that swallow errors. "OK" response no matter what happens. We add structured error handling and observability.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">05</div>
+        <h3>Performance cliffs</h3>
+        <p>N+1 queries, no caching, full table scans. Fine for 5 users, collapses at 500. We optimize the hot paths and add monitoring.</p>
+      </div>
+      <div class="problem-card">
+        <div class="num">06</div>
+        <h3>Zero test coverage</h3>
+        <p>No tests, no types, no CI. Deploying on vibes. We add test suites, TypeScript, linting, and pipelines so you can ship with confidence.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .problems {
+    padding: 7rem 0;
+  }
+
+  .problems-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .problem-card {
+    background: var(--surface);
+    padding: 2rem;
+    transition: background 0.2s;
+  }
+
+  .problem-card:hover {
+    background: var(--surface-2);
+  }
+
+  .problem-card .num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-bottom: 1.25rem;
+  }
+
+  .problem-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  .problem-card p {
+    font-size: 0.875rem;
+    color: var(--text-dim);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 900px) {
+    .problems-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

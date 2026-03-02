@@ -1,0 +1,85 @@
+<section class="trust">
+  <div class="container">
+    <div class="trust-inner">
+      <span class="trust-label">Since 2024</span>
+      <div class="trust-stats">
+        <div class="trust-stat">
+          <div class="num">340<span>+</span></div>
+          <div class="lbl">Codebases rescued</div>
+        </div>
+        <div class="trust-stat">
+          <div class="num">48<span>h</span></div>
+          <div class="lbl">Avg. turnaround</div>
+        </div>
+        <div class="trust-stat">
+          <div class="num">12<span>k</span></div>
+          <div class="lbl">Bugs squashed</div>
+        </div>
+        <div class="trust-stat">
+          <div class="num">98<span>%</span></div>
+          <div class="lbl">Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .trust {
+    padding: 4rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .trust-inner {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  .trust-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+
+  .trust-stats {
+    display: flex;
+    gap: 3.5rem;
+  }
+
+  .trust-stat {
+    white-space: nowrap;
+  }
+
+  .trust-stat .num {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.03em;
+  }
+
+  .trust-stat .num span {
+    color: var(--accent);
+  }
+
+  .trust-stat .lbl {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+  }
+
+  @media (max-width: 900px) {
+    .trust-inner {
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .trust-stats {
+      gap: 2rem;
+    }
+  }
+</style>

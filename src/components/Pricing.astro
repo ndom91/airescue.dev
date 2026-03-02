@@ -1,0 +1,142 @@
+<div class="container" id="pricing">
+  <section class="pricing">
+    <div class="section-header">
+      <div class="eyebrow">// pricing</div>
+      <h2>Flat rate. No hourly surprises.</h2>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="tier">Diagnostic</div>
+        <div class="price">$499</div>
+        <div class="price-sub">One-time audit</div>
+        <ul>
+          <li>Full codebase review</li>
+          <li>Architecture analysis</li>
+          <li>Security vulnerability scan</li>
+          <li>Prioritized fix plan</li>
+          <li>30-min walkthrough call</li>
+        </ul>
+        <a href="#" class="btn btn-ghost btn-full">Book diagnostic</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="tier">Full Rescue</div>
+        <div class="price">$2,999</div>
+        <div class="price-sub">Complete repair, 5&ndash;10 days</div>
+        <ul>
+          <li>Everything in Diagnostic</li>
+          <li>Complete code refactoring</li>
+          <li>Test suite + CI/CD setup</li>
+          <li>Documentation</li>
+          <li>2 weeks post-delivery support</li>
+        </ul>
+        <a href="#" class="btn btn-accent btn-full">Start rescue &rarr;</a>
+      </div>
+      <div class="pricing-card">
+        <div class="tier">Retainer</div>
+        <div class="price">$999<span class="price-mo">/mo</span></div>
+        <div class="price-sub">Ongoing safety net</div>
+        <ul>
+          <li>Weekly code reviews</li>
+          <li>Priority rescue queue</li>
+          <li>Architecture consulting</li>
+          <li>AI workflow coaching</li>
+          <li>Dedicated Slack channel</li>
+        </ul>
+        <a href="#" class="btn btn-ghost btn-full">Get retainer</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .pricing {
+    padding: 7rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .pricing-card {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--surface);
+  }
+
+  .pricing-card.featured {
+    border-color: var(--accent-mid);
+    background: linear-gradient(180deg, rgba(212, 255, 43, 0.02) 0%, var(--surface) 40%);
+  }
+
+  .pricing-card .tier {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+
+  .pricing-card.featured .tier {
+    color: var(--accent);
+  }
+
+  .pricing-card .price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  .price-mo {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-dim);
+  }
+
+  .pricing-card .price-sub {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+  }
+
+  .pricing-card ul {
+    list-style: none;
+    flex: 1;
+    margin-bottom: 2rem;
+  }
+
+  .pricing-card ul li {
+    font-size: 0.85rem;
+    color: var(--text);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+  }
+
+  .pricing-card ul li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 900px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+    }
+  }
+</style>

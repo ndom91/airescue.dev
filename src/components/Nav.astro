@@ -1,0 +1,78 @@
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo">AIrescue<span>.</span>dev</a>
+    <div class="nav-right">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#" class="btn btn-accent">Fix my code</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 0 2rem;
+    background: rgba(9, 9, 11, 0.8);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+  }
+
+  .logo {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: -0.03em;
+  }
+
+  .logo span {
+    color: var(--accent);
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-right a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+
+  .nav-right a:hover {
+    color: var(--white);
+  }
+
+  .nav-right a.btn-accent {
+    color: var(--bg);
+  }
+
+  @media (max-width: 600px) {
+    nav {
+      padding: 0 1.25rem;
+    }
+
+    .nav-right a:not(.btn) {
+      display: none;
+    }
+  }
+</style>
