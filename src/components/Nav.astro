@@ -50,15 +50,12 @@
     gap: 2rem;
   }
 
-  .nav-right a {
+  .nav-right a:not(.btn) {
     color: var(--text-dim);
     text-decoration: none;
     font-size: 0.85rem;
     font-weight: 500;
     transition: color 0.15s;
-  }
-
-  .nav-right a:not(.btn) {
     position: relative;
   }
 
@@ -77,12 +74,8 @@
     width: 100%;
   }
 
-  .nav-right a:hover {
+  .nav-right a:not(.btn):hover {
     color: var(--white);
-  }
-
-  .nav-right a.btn-accent {
-    color: var(--bg);
   }
 
   @media (max-width: 600px) {

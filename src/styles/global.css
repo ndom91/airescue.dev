@@ -80,9 +80,9 @@ body::before {
 }
 
 .btn-accent:hover {
-  filter: brightness(1.1);
+  background: #dbff54;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 16px rgba(212, 255, 43, 0.25), 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .btn-ghost {
