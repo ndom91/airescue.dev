@@ -1,7 +1,7 @@
 <section class="trust">
   <div class="container">
     <div class="trust-inner">
-      <span class="trust-label">Since 2024</span>
+      <span class="trust-label mono">Field Ops Since 2024</span>
       <div class="trust-stats">
         <div class="trust-stat">
           <div class="num">340<span>+</span></div>
@@ -26,75 +26,104 @@
 
 <style>
   .trust {
-    padding: 4rem 0;
-    border-top: none;
-    border-bottom: none;
-    position: relative;
+    padding: 2.2rem 0 3.6rem;
   }
-
-  .trust::before,
-  .trust::after {
-    content: '';
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
-  }
-
-  .trust::before { top: 0; }
-  .trust::after { bottom: 0; }
 
   .trust-inner {
     display: flex;
-    align-items: center;
-    gap: 3.5rem;
+    align-items: stretch;
+    gap: 0;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    box-shadow: 6px 6px 0 var(--border);
   }
 
   .trust-label {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.72rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--text-dim);
-    white-space: nowrap;
+    min-width: 170px;
+    display: grid;
+    place-items: center;
+    border-right: 1px solid var(--border);
+    padding: 0.9rem;
   }
 
   .trust-stats {
-    display: flex;
-    gap: 3.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
   }
 
   .trust-stat {
     white-space: nowrap;
+    padding: 1rem 1.2rem;
+    border-right: 1px solid var(--border);
+  }
+
+  .trust-stat:last-child {
+    border-right: 0;
   }
 
   .trust-stat .num {
     font-size: 2rem;
-    font-weight: 800;
-    color: var(--white);
+    font-weight: 700;
+    color: var(--text);
     letter-spacing: -0.04em;
     font-variant-numeric: tabular-nums;
+    line-height: 1;
+    margin-bottom: 0.35rem;
   }
 
   .trust-stat .num span {
-    color: var(--accent);
+    color: var(--accent-ink);
   }
 
   .trust-stat .lbl {
-    font-size: 0.8rem;
+    font-size: 0.77rem;
     color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 960px) {
     .trust-inner {
       flex-direction: column;
-      gap: 1.5rem;
-      align-items: flex-start;
+    }
+
+    .trust-label {
+      border-right: 0;
+      border-bottom: 1px solid var(--border);
+      width: 100%;
+      place-items: start;
     }
 
     .trust-stats {
-      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .trust-stat:nth-child(2) {
+      border-right: 0;
+    }
+
+    .trust-stat:nth-child(-n + 2) {
+      border-bottom: 1px solid var(--border);
+    }
+  }
+
+  @media (max-width: 520px) {
+    .trust-stats {
+      grid-template-columns: 1fr;
+    }
+
+    .trust-stat {
+      border-right: 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-stat:last-child {
+      border-bottom: 0;
     }
   }
 </style>

@@ -1,7 +1,7 @@
 <div class="container">
   <section class="proof">
     <div class="section-header">
-      <div class="eyebrow">// from our clients</div>
+      <div class="eyebrow">// field reports</div>
       <h2>They were stuck too</h2>
     </div>
     <div class="proof-grid">
@@ -29,8 +29,7 @@
 
 <style>
   .proof {
-    padding: 7rem 0;
-    border-top: 1px solid var(--border);
+    padding: 6rem 0;
     animation: fadeSlideIn ease both;
     animation-timeline: view();
     animation-range: entry 0% entry 20%;
@@ -39,66 +38,68 @@
   .proof-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    gap: 1rem;
     align-items: start;
   }
 
   .proof-card {
     background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 2.5rem 2rem 2rem;
+    border: 1px solid var(--border-strong);
+    padding: 2.2rem 1.8rem 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 5px 5px 0 var(--border);
   }
 
   .proof-card::before {
     content: '\201C';
     position: absolute;
     top: -10px;
-    left: 16px;
+    right: 12px;
     font-size: 8rem;
-    font-family: 'Plus Jakarta Sans', serif;
-    font-weight: 800;
-    color: rgba(212, 255, 43, 0.05);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    color: var(--text-ghost);
     line-height: 1;
     pointer-events: none;
     transition: color 0.3s;
   }
 
   .proof-card:hover {
-    border-color: var(--accent-mid);
-    transform: translateY(-4px);
+    border-color: var(--text);
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 var(--border-strong);
   }
 
   .proof-card:hover::before {
-    color: rgba(212, 255, 43, 0.1);
+    color: var(--accent-ghost);
   }
 
   .proof-card:nth-child(2) {
-    transform: translateY(-12px);
-    border-color: var(--accent-mid);
+    transform: translateY(-12px) rotate(-1deg);
+    border-color: var(--text);
+    background: color-mix(in srgb, var(--surface) 82%, var(--surface-2) 18%);
   }
 
   .proof-card:nth-child(2):hover {
-    transform: translateY(-16px);
+    transform: translateY(-16px) rotate(-1deg);
   }
 
   .proof-card blockquote {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     color: var(--text);
-    line-height: 1.75;
+    line-height: 1.7;
     margin-bottom: 1.5rem;
     position: relative;
     z-index: 1;
   }
 
   .proof-card blockquote strong {
-    color: var(--accent);
+    color: var(--accent-ink);
     font-weight: 600;
   }
 
@@ -106,11 +107,11 @@
     font-size: 0.8rem;
     color: var(--text-dim);
     padding-top: 1rem;
-    border-top: 1px solid var(--border);
+    border-top: 1px dashed var(--border);
   }
 
   .proof-author strong {
-    color: var(--white);
+    color: var(--text);
     font-weight: 600;
   }
 

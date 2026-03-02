@@ -1,7 +1,7 @@
 <div class="container" id="process">
   <section class="process">
     <div class="section-header">
-      <div class="eyebrow">// how it works</div>
+      <div class="eyebrow">// operating sequence</div>
       <h2>Four steps to a codebase you actually own</h2>
     </div>
     <div class="process-track">
@@ -43,13 +43,18 @@
 
 <style>
   @keyframes pulse-ring {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.8); opacity: 0; }
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
   }
 
   .process {
-    padding: 7rem 0 9rem;
-    border-top: 1px solid var(--border);
+    padding: 6.3rem 0 7.8rem;
     animation: fadeSlideIn ease both;
     animation-timeline: view();
     animation-range: entry 0% entry 20%;
@@ -58,49 +63,53 @@
   .process-track {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border-strong);
+    box-shadow: 7px 7px 0 var(--border);
   }
 
   .process-step {
-    padding: 0 2rem 0 0;
+    padding: 1.6rem;
+    background: var(--surface);
     position: relative;
   }
 
   .process-step::before {
     content: '';
     position: absolute;
-    top: 4.5rem;
-    left: 0;
+    top: 3.4rem;
+    left: 1.6rem;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, var(--accent-mid), var(--border), var(--border));
+    background: linear-gradient(90deg, var(--text) 0, var(--text) 65%, transparent 65%);
+    opacity: 0.28;
   }
 
   .process-step:first-child::before {
-    left: 1rem;
+    left: 1.6rem;
   }
 
   .process-step:last-child::before {
     right: unset;
-    width: 1rem;
+    width: 1.4rem;
   }
 
   .step-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 2.5rem;
+    font-family: var(--font-mono);
+    font-size: 2.3rem;
     font-weight: 500;
-    color: rgba(212, 255, 43, 0.06);
+    color: var(--text-faint-strong);
     line-height: 1;
     letter-spacing: -0.05em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
 
   .step-dot {
     width: 10px;
     height: 10px;
-    border-radius: 50%;
-    background: var(--accent);
-    margin-bottom: 1.5rem;
+    background: var(--text);
+    margin-bottom: 1.2rem;
     position: relative;
     z-index: 1;
   }
@@ -109,8 +118,7 @@
     content: '';
     position: absolute;
     inset: -5px;
-    border-radius: 50%;
-    border: 1px solid rgba(212, 255, 43, 0.25);
+    border: 1px solid var(--accent-mid);
     animation: pulse-ring 2.5s ease-in-out infinite;
   }
 
@@ -119,9 +127,9 @@
   .process-step:nth-child(4) .step-dot::after { animation-delay: 1.5s; }
 
   .process-step .step-label {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.7rem;
-    color: var(--accent);
+    color: var(--text-dim);
     margin-bottom: 0.5rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -129,8 +137,8 @@
 
   .process-step h3 {
     font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--white);
+    font-weight: 600;
+    color: var(--text);
     margin-bottom: 0.5rem;
     letter-spacing: -0.02em;
   }
@@ -144,19 +152,17 @@
   .process-step .time {
     display: inline-block;
     margin-top: 1rem;
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.7rem;
-    color: var(--accent);
+    color: var(--accent-ink);
     padding: 0.25rem 0.6rem;
     border: 1px solid var(--accent-mid);
-    border-radius: 20px;
-    background: rgba(212, 255, 43, 0.04);
+    background: color-mix(in srgb, var(--accent) 16%, var(--white) 84%);
   }
 
   @media (max-width: 900px) {
     .process-track {
       grid-template-columns: 1fr 1fr;
-      gap: 2rem;
     }
 
     .process-step::before {
