@@ -1,39 +1,39 @@
 <div class="container" id="services">
   <section class="problems">
     <div class="section-header">
-      <div class="eyebrow">// failure map</div>
-      <h2>The six patterns we see in every vibe-coded project</h2>
+      <div class="eyebrow">// common patterns</div>
+      <h2>Six things that happen when you move fast</h2>
     </div>
     <div class="problems-grid">
       <div class="problem-card">
         <div class="num">01</div>
         <h3>Architectural chaos</h3>
-        <p>No separation of concerns. Business logic in UI components. API calls scattered everywhere. We restructure into layers that make sense.</p>
+        <p>Business logic in UI components, API calls scattered everywhere. Totally normal at speed. We restructure into layers that make sense going forward.</p>
       </div>
       <div class="problem-card">
         <div class="num">02</div>
         <h3>Security gaps</h3>
-        <p>Raw SQL strings, hardcoded secrets, broken auth. Security often gets missed in rapid prototyping. We patch every vulnerability and add real safeguards.</p>
+        <p>Hardcoded secrets, raw queries, auth edge cases. Security naturally takes a back seat during rapid prototyping. We patch vulnerabilities and add proper safeguards.</p>
       </div>
       <div class="problem-card">
         <div class="num">03</div>
         <h3>Dependency bloat</h3>
-        <p>47 packages where 20 lines of code would do. Conflicting versions, abandoned libraries. We trim the dead weight and update what stays.</p>
+        <p>AI tools love adding packages. Before you know it there are 47 where 20 lines would do. We trim what's unnecessary and update what stays.</p>
       </div>
       <div class="problem-card">
         <div class="num">04</div>
         <h3>Silent failures</h3>
-        <p>Empty catch blocks. Functions that swallow errors. "OK" response no matter what happens. We add structured error handling and observability.</p>
+        <p>Empty catch blocks, functions that swallow errors. Generated code often optimizes for the happy path. We add structured error handling and observability.</p>
       </div>
       <div class="problem-card">
         <div class="num">05</div>
         <h3>Performance cliffs</h3>
-        <p>N+1 queries, no caching, full table scans. Fine for 5 users, collapses at 500. We optimize the hot paths and add monitoring.</p>
+        <p>N+1 queries, no caching, full table scans. Works great in dev, struggles at scale. We optimize the hot paths and add monitoring before it matters.</p>
       </div>
       <div class="problem-card">
         <div class="num">06</div>
         <h3>Zero test coverage</h3>
-        <p>No tests, no types, no CI. Moving fast meant skipping the safety nets. We add test suites, TypeScript, linting, and pipelines so you can ship with confidence.</p>
+        <p>No tests, no types, no CI. Totally reasonable when validating an idea. Now that it's working, we add the safety nets so you can keep shipping with confidence.</p>
       </div>
     </div>
   </section>
@@ -146,7 +146,7 @@
 
   .problem-card:nth-child(1)::before,
   .problem-card:nth-child(4)::before {
-    content: 'critical';
+    content: 'high priority';
     position: absolute;
     top: -0.72rem;
     right: 1rem;
@@ -162,7 +162,7 @@
   }
 
   .problem-card:nth-child(4)::before {
-    content: 'stability risk';
+    content: 'worth fixing early';
   }
 
   @media (max-width: 900px) {
