@@ -1,7 +1,6 @@
 <section class="cta-section">
   <div class="container">
     <div class="cta">
-      <div class="cta-alert mono" aria-hidden="true">Response window closes today</div>
       <div class="cta-eyebrow">// dispatch a rescue engineer</div>
       <h2>Ready for code you can trust?<br />Start <span class="accent">shipping.</span></h2>
       <p>You already proved demand. Now lock in the engineering quality to scale without fear.</p>
@@ -23,7 +22,7 @@
   }
 
   .cta-section .container {
-    padding-top: 4rem;
+    padding-top: 2rem;
     padding-bottom: 4rem;
   }
 
@@ -39,18 +38,6 @@
     padding-right: clamp(1.5rem, 5vw, 4rem);
   }
 
-  .cta-alert {
-    display: inline-block;
-    margin-bottom: 1rem;
-    font-size: 0.64rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--warn-ink);
-    background: var(--warn-bg);
-    border: 1px solid var(--ink);
-    box-shadow: 3px 3px 0 var(--ink);
-    padding: 0.22rem 0.55rem;
-  }
 
   .cta::after {
     content: '';
@@ -65,11 +52,16 @@
 
   .cta-eyebrow {
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text-dim);
+    display: inline-block;
+    font-size: 0.69rem;
+    color: var(--text);
     margin-bottom: 1.3rem;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+    padding: 0.24rem 0.55rem;
+    border: 1px solid var(--ink);
+    background: color-mix(in srgb, var(--surface) 70%, var(--surface-2) 30%);
+    box-shadow: 3px 3px 0 var(--border);
   }
 
   .cta h2 {
