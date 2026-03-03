@@ -1,12 +1,14 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
-  --font-mono: 'DM Mono', monospace;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
   --bg: #f3f4ef;
   --surface: #fbfbf8;
   --surface-2: #ebede4;
@@ -46,11 +48,14 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-color: var(--accent) var(--ink);
+  scrollbar-width: thin;
 }
 
 body {
   font-family: var(--font-sans);
-  background: radial-gradient(circle at 12% 8%, rgba(196, 255, 47, 0.15), transparent 40%),
+  background:
+    radial-gradient(circle at 12% 8%, rgba(196, 255, 47, 0.15), transparent 40%),
     radial-gradient(circle at 90% 6%, rgba(255, 79, 47, 0.08), transparent 34%),
     var(--bg);
   color: var(--text);
@@ -60,14 +65,19 @@ body {
 }
 
 body::before {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
-  background-image: linear-gradient(rgba(16, 18, 15, 0.05) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(16, 18, 15, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(16, 18, 15, 0.05) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: radial-gradient(circle at center, black 35%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle at center, black 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 35%,
+    transparent 100%
+  );
   pointer-events: none;
   z-index: -1;
 }
@@ -97,7 +107,11 @@ body::before {
   cursor: pointer;
   text-decoration: none;
   border: 2px solid transparent;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background-color 0.18s ease,
+    color 0.18s ease;
 }
 
 .btn-accent {
@@ -215,7 +229,7 @@ button:focus-visible,
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent);
+  background: var(--ink);
   border: 2px solid var(--ink);
 }
 
@@ -223,13 +237,10 @@ button:focus-visible,
   background: var(--accent);
 }
 
-html {
-  scrollbar-color: var(--ink) var(--bg);
-  scrollbar-width: thin;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
