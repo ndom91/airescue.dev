@@ -37,6 +37,11 @@
   --accent-grad-end: #6d9806;
   --featured-ring-dark: #1f2d00;
   --scan-line: rgba(196, 255, 47, 0.08);
+  --ink: #0f110f;
+  --stripe-dark: #171916;
+  --stripe-light: #d7deca;
+  --warn-bg: #ffe27a;
+  --warn-ink: #3c2a00;
 }
 
 html {
@@ -82,7 +87,7 @@ body::before {
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  padding: 0.68rem 1.3rem;
+  padding: 0.7rem 1.35rem;
   font-family: var(--font-mono);
   font-size: 0.76rem;
   font-weight: 600;
@@ -91,32 +96,32 @@ body::before {
   border-radius: 0;
   cursor: pointer;
   text-decoration: none;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.18s ease;
 }
 
 .btn-accent {
   background: var(--accent);
   color: var(--text);
-  border-color: var(--text);
-  box-shadow: 4px 4px 0 var(--text);
+  border-color: var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
 }
 
 .btn-accent:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 7px 7px 0 var(--text);
+  box-shadow: 8px 8px 0 var(--ink);
 }
 
 .btn-ghost {
   background: var(--surface);
   color: var(--text);
-  border-color: var(--border-strong);
-  box-shadow: 3px 3px 0 var(--border);
+  border-color: var(--ink);
+  box-shadow: 4px 4px 0 var(--border-strong);
 }
 
 .btn-ghost:hover {
   transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 var(--border-strong);
+  box-shadow: 7px 7px 0 var(--ink);
 }
 
 .btn-full {
@@ -129,19 +134,24 @@ body::before {
 
 .section-header .eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-dim);
+  display: inline-block;
+  font-size: 0.69rem;
+  color: var(--text);
   margin-bottom: 0.9rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  padding: 0.24rem 0.55rem;
+  border: 1px solid var(--ink);
+  background: color-mix(in srgb, var(--surface) 70%, var(--surface-2) 30%);
+  box-shadow: 3px 3px 0 var(--border);
 }
 
 .section-header h2 {
-  font-size: clamp(2rem, 4vw, 3.3rem);
-  font-weight: 700;
+  font-size: clamp(2.1rem, 4.9vw, 4.1rem);
+  font-weight: 800;
   color: var(--text);
-  letter-spacing: -0.04em;
-  line-height: 1.04;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
   text-wrap: balance;
 }
 

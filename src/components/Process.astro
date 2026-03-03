@@ -63,10 +63,10 @@
   .process-track {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border-strong);
-    box-shadow: 7px 7px 0 var(--border);
+    gap: 2px;
+    background: var(--ink);
+    border: 2px solid var(--ink);
+    box-shadow: 7px 7px 0 var(--border-strong);
   }
 
   .process-step {
@@ -79,20 +79,15 @@
     content: '';
     position: absolute;
     top: 3.4rem;
-    left: 1.6rem;
+    left: 0.25rem;
     right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, var(--text) 0, var(--text) 65%, transparent 65%);
-    opacity: 0.28;
-  }
-
-  .process-step:first-child::before {
-    left: 1.6rem;
+    height: 2px;
+    background: repeating-linear-gradient(90deg, var(--border-strong) 0, var(--border-strong) 6px, transparent 6px, transparent 12px);
   }
 
   .process-step:last-child::before {
     right: unset;
-    width: 1.4rem;
+    width: 3rem;
   }
 
   .step-num {
@@ -119,7 +114,6 @@
     position: absolute;
     inset: -5px;
     border: 1px solid var(--accent-mid);
-    animation: pulse-ring 2.5s ease-in-out infinite;
   }
 
   .process-step:nth-child(2) .step-dot::after { animation-delay: 0.5s; }

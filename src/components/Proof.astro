@@ -44,7 +44,7 @@
 
   .proof-card {
     background: var(--surface);
-    border: 1px solid var(--border-strong);
+    border: 2px solid var(--ink);
     padding: 2.2rem 1.8rem 1.6rem;
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@
     position: relative;
     overflow: hidden;
     transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 5px 5px 0 var(--border);
+    box-shadow: 6px 6px 0 var(--border-strong);
   }
 
   .proof-card::before {
@@ -70,9 +70,9 @@
   }
 
   .proof-card:hover {
-    border-color: var(--text);
+    border-color: var(--ink);
     transform: translate(-3px, -3px);
-    box-shadow: 8px 8px 0 var(--border-strong);
+    box-shadow: 9px 9px 0 var(--ink);
   }
 
   .proof-card:hover::before {
@@ -80,13 +80,12 @@
   }
 
   .proof-card:nth-child(2) {
-    transform: translateY(-12px) rotate(-1deg);
-    border-color: var(--text);
+    transform: translateY(-8px) rotate(-0.8deg);
     background: color-mix(in srgb, var(--surface) 82%, var(--surface-2) 18%);
   }
 
   .proof-card:nth-child(2):hover {
-    transform: translateY(-16px) rotate(-1deg);
+    transform: translateY(-12px) rotate(-0.8deg);
   }
 
   .proof-card blockquote {

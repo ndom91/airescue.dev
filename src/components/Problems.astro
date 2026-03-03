@@ -49,23 +49,34 @@
 
   .problems-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border: 1px solid var(--border-strong);
-    box-shadow: 8px 8px 0 var(--border);
-    overflow: hidden;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.9rem;
+    position: relative;
   }
 
+
   .problem-card:nth-child(1) {
-    grid-column: span 2;
+    grid-column: 1 / span 7;
+  }
+
+  .problem-card:nth-child(2) {
+    grid-column: 8 / span 5;
+  }
+
+  .problem-card:nth-child(3) {
+    grid-column: 1 / span 4;
   }
 
   .problem-card:nth-child(4) {
-    grid-column: span 2;
+    grid-column: 5 / span 8;
   }
 
   .problem-card:nth-child(5) {
-    grid-column: span 2;
+    grid-column: 1 / span 7;
+  }
+
+  .problem-card:nth-child(6) {
+    grid-column: 8 / span 5;
   }
 
   .problem-card {
@@ -73,8 +84,9 @@
     padding: 2rem;
     transition: background 0.3s, transform 0.3s;
     position: relative;
-    border-right: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
+    z-index: 1;
+    border: 2px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--border);
   }
 
   .problem-card::after {
@@ -92,7 +104,8 @@
 
   .problem-card:hover {
     background: var(--surface-2);
-    transform: translateY(-4px);
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 var(--ink);
   }
 
   .problem-card:hover::after {
@@ -103,7 +116,7 @@
     font-family: var(--font-mono);
     font-size: 3.2rem;
     font-weight: 500;
-    color: var(--text-faint);
+    color: var(--text-faint-strong);
     margin-bottom: 0.65rem;
     line-height: 1;
     letter-spacing: -0.05em;
@@ -115,8 +128,8 @@
   }
 
   .problem-card h3 {
-    font-size: 1.05rem;
-    font-weight: 600;
+    font-size: 1.14rem;
+    font-weight: 700;
     color: var(--text);
     margin-bottom: 0.5rem;
     letter-spacing: -0.02em;
@@ -125,25 +138,46 @@
   .problem-card p {
     font-size: 0.875rem;
     color: var(--text-dim);
-    line-height: 1.62;
+    line-height: 1.56;
   }
 
   .problem-card:nth-child(2n) {
     background: color-mix(in srgb, var(--surface) 74%, var(--surface-2) 26%);
   }
 
+  .problem-card:nth-child(1)::before,
+  .problem-card:nth-child(4)::before {
+    content: 'critical';
+    position: absolute;
+    top: -0.72rem;
+    right: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--warn-ink);
+    background: var(--warn-bg);
+    border: 1px solid var(--ink);
+    box-shadow: 2px 2px 0 var(--ink);
+    padding: 0.15rem 0.4rem;
+  }
+
+  .problem-card:nth-child(4)::before {
+    content: 'stability risk';
+  }
+
   @media (max-width: 900px) {
     .problems-grid {
       grid-template-columns: 1fr;
-    }
-
-    .problem-card {
-      border-right: 0;
+      gap: 0.75rem;
     }
 
     .problem-card:nth-child(1),
+    .problem-card:nth-child(2),
+    .problem-card:nth-child(3),
     .problem-card:nth-child(4),
-    .problem-card:nth-child(5) {
+    .problem-card:nth-child(5),
+    .problem-card:nth-child(6) {
       grid-column: span 1;
     }
   }

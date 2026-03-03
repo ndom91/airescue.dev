@@ -6,10 +6,10 @@
         <h1>Built by prompts.<br /><span class="dim">Hardened by humans.</span></h1>
         <p class="hero-desc">AIrescue rebuilds unstable, rushed, or vibe-coded codebases into systems your team can run, scale, and ship from confidently.</p>
         <div class="hero-actions">
-          <a href="#" class="btn btn-accent">Get a free assessment</a>
+          <a href="#" class="btn btn-accent">Claim free assessment slot</a>
           <a href="#services" class="btn btn-ghost">See rescue scope</a>
         </div>
-        <p class="hero-meta mono">Avg response: 2 hours | Typical rescue: 5-10 days</p>
+        <p class="hero-meta mono">Avg first response: 2 hours • Typical rescue window: 5-10 days</p>
       </div>
       <aside class="hero-console" aria-label="Sample rescue diagnostics">
         <div class="console-head">
@@ -55,33 +55,41 @@
 
   .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
-    gap: 2rem;
-    align-items: end;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr);
+    gap: 1.75rem;
+    align-items: start;
   }
 
   .hero-copy {
     max-width: 760px;
+    position: relative;
+    z-index: 2;
   }
 
   .hero-eyebrow {
     font-family: var(--font-mono);
-    font-size: 0.78rem;
-    color: var(--text-dim);
+    display: inline-block;
+    font-size: 0.72rem;
+    color: var(--text);
     margin-bottom: 1rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
+    padding: 0.24rem 0.62rem;
+    border: 1px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--border);
+    background: var(--surface);
     animation: heroFadeUp 0.6s ease 0.05s both;
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 7.6vw, 6.2rem);
-    font-weight: 700;
-    line-height: 0.9;
-    letter-spacing: -0.055em;
+    font-size: clamp(3.25rem, 8.6vw, 7.35rem);
+    font-weight: 800;
+    line-height: 0.84;
+    letter-spacing: -0.065em;
     color: var(--text);
     margin-bottom: 1.35rem;
     animation: heroFadeUp 0.62s ease 0.12s both;
+    text-wrap: balance;
   }
 
   .hero h1 .dim {
@@ -92,11 +100,11 @@
   }
 
   .hero-desc {
-    font-size: 1.08rem;
+    font-size: 1.03rem;
     color: var(--text-dim);
     max-width: 560px;
-    margin-bottom: 2rem;
-    line-height: 1.65;
+    margin-bottom: 1.55rem;
+    line-height: 1.55;
     animation: heroFadeUp 0.62s ease 0.24s both;
   }
 
@@ -116,12 +124,15 @@
 
   .hero-console {
     background: var(--surface);
-    border: 1px solid var(--border-strong);
-    box-shadow: 7px 7px 0 var(--border);
+    border: 2px solid var(--ink);
+    box-shadow: 9px 9px 0 var(--border-strong);
     position: relative;
     overflow: hidden;
     animation: heroFadeUp 0.7s ease 0.32s both;
+    margin-top: 3.2rem;
+    transform: translateX(1rem);
   }
+
 
   .hero-console::after {
     content: '';
@@ -137,7 +148,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.55rem 0.85rem;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 2px solid var(--ink);
     background: var(--surface-2);
     position: relative;
     z-index: 1;
@@ -157,15 +168,15 @@
 
   .hero-console ul {
     list-style: none;
-    padding: 0.9rem 0.95rem;
+    padding: 0.95rem 1rem;
     position: relative;
     z-index: 1;
   }
 
   .hero-console li {
-    font-size: 0.82rem;
-    color: var(--text-dim);
-    line-height: 1.55;
+    font-size: 0.8rem;
+    color: var(--text);
+    line-height: 1.5;
     padding: 0.48rem 0;
     border-bottom: 1px dashed var(--border);
   }
@@ -195,6 +206,8 @@
 
     .hero-console {
       max-width: 580px;
+      transform: none;
+      margin-top: 1.2rem;
     }
   }
 
@@ -204,7 +217,7 @@
     }
 
     .hero h1 {
-      line-height: 0.96;
+      line-height: 0.9;
     }
 
     .hero-actions {

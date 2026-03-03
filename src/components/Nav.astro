@@ -5,7 +5,7 @@
       <a href="#services">Services</a>
       <a href="#process">Process</a>
       <a href="#pricing">Pricing</a>
-      <a href="#" class="btn btn-accent">Run triage</a>
+      <a href="#" class="btn btn-accent nav-cta">Run triage</a>
     </div>
   </div>
 </nav>
@@ -28,9 +28,9 @@
     align-items: center;
     min-height: 3.5rem;
     padding: 0.35rem 0.45rem 0.35rem 0.8rem;
-    border: 1px solid var(--border-strong);
+    border: 2px solid var(--ink);
     background: color-mix(in srgb, var(--surface) 92%, var(--white) 8%);
-    box-shadow: 5px 5px 0 var(--shadow);
+    box-shadow: 5px 5px 0 var(--border-strong);
   }
 
   .logo {
@@ -96,6 +96,16 @@
 
   .nav-right a:not(.btn):hover {
     color: var(--text);
+  }
+
+  .nav-cta {
+    border-color: var(--accent);
+    box-shadow: 4px 4px 0 var(--accent-ink);
+  }
+
+  .nav-cta:hover {
+    border-color: var(--accent);
+    box-shadow: 6px 6px 0 var(--accent-ink);
   }
 
   @media (max-width: 720px) {
