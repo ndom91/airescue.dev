@@ -48,8 +48,8 @@
 
 html {
   scroll-behavior: smooth;
-  scrollbar-color: var(--accent) var(--ink);
-  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--stripe-dark);
+  scrollbar-width: auto;
 }
 
 body {
