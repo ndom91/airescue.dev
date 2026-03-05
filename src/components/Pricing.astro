@@ -51,8 +51,13 @@
           <a href="#" class="btn btn-ghost btn-full">Get retainer</a>
         </div>
       </div>
-      <p class="disclaimer">This is a demo site. All prices, reviews, and statistics shown are fictional.</p>
-      <p class="inquiry mono">Seriously interested? Reach out at info[at]airescue.dev</p>
+      <div class="pricing-footer">
+        <div class="pricing-footer-inner">
+          <p class="disclaimer">Demo site &mdash; prices, testimonials &amp; stats are illustrative</p>
+          <div class="footer-divider"></div>
+          <p class="inquiry">Seriously interested? <span class="email">info[at]airescue.dev</span></p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -252,21 +257,44 @@
     flex-shrink: 0;
   }
 
-  .disclaimer {
-    text-align: left;
+  .pricing-footer {
+    margin-top: 3rem;
+    border: 1px solid var(--border);
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: color-mix(in srgb, var(--surface) 90%, transparent);
+  }
+
+  .pricing-footer-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
     font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--text-dim);
-    margin-top: 2.2rem;
+    font-size: 0.68rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
 
-  .inquiry {
-    font-size: 0.72rem;
+  .footer-divider {
+    width: 1px;
+    height: 1rem;
+    background: var(--border-strong);
+    flex-shrink: 0;
+  }
+
+  .disclaimer {
     color: var(--text-dim);
-    margin-top: 0.6rem;
-    letter-spacing: 0.04em;
+  }
+
+  .inquiry {
+    color: var(--text-dim);
+  }
+
+  .inquiry .email {
+    color: var(--text);
+    border-bottom: 1px solid var(--border-strong);
   }
 
   @media (max-width: 900px) {
@@ -285,8 +313,15 @@
       text-align: left;
     }
 
-    .disclaimer {
-      text-align: left;
+    .pricing-footer-inner {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    .footer-divider {
+      width: 3rem;
+      height: 1px;
     }
   }
 </style>
