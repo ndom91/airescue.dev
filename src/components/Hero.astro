@@ -220,8 +220,18 @@
     }
 
     .hero h1 {
-      line-height: 0.9;
+      font-size: clamp(3.8rem, 15vw, 5.8rem);
+      line-height: 0.88;
+      letter-spacing: -0.06em;
       white-space: normal;
+    }
+
+    .hero h1 br {
+      display: none;
+    }
+
+    .hero h1 .dim {
+      margin-left: 0.25em;
     }
 
     .hero-actions {
