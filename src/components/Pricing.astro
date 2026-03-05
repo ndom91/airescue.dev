@@ -26,7 +26,6 @@
           <div class="tier">Full Upgrade</div>
           <div class="price">$2,999</div>
           <div class="price-sub">Complete upgrade, 5&ndash;10 days</div>
-          <div class="slot-note mono">2 slots available this month</div>
           <ul>
             <li>Everything in Diagnostic</li>
             <li>Complete code refactoring</li>
@@ -134,8 +133,8 @@
     transform: translateY(-0.5rem);
     position: relative;
     z-index: 1;
-    box-shadow: 10px 10px 0 var(--ink);
-    border-width: 3px;
+    box-shadow: 7px 7px 0 var(--ink);
+    border-width: 2px;
     background: var(--surface);
     border-color: var(--ink);
   }
@@ -310,10 +309,10 @@
     }
   }
 
-  @media (max-width: 900px) {
+  /* 2-column intermediate layout */
+  @media (max-width: 1060px) {
     .pricing-grid {
-      grid-template-columns: 1fr;
-      max-width: 400px;
+      grid-template-columns: 1fr 1fr;
     }
 
     .pricing-card:nth-child(1),
@@ -322,8 +321,39 @@
       transform: none;
     }
 
-    .pricing-header {
-      text-align: left;
+    /* Reorder: Diagnostic & Retainer on row 1, Featured spans row 2 */
+    .pricing-card:nth-child(1) {
+      order: 1;
+    }
+
+    .pricing-card:nth-child(3) {
+      order: 2;
+    }
+
+    .pricing-card.featured {
+      order: 3;
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* Single-column mobile layout */
+  @media (max-width: 600px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+
+    /* Reset order for single column — featured first */
+    .pricing-card:nth-child(1) {
+      order: 0;
+    }
+
+    .pricing-card:nth-child(3) {
+      order: 0;
+    }
+
+    .pricing-card.featured {
+      order: -1;
+      grid-column: auto;
     }
 
     .pricing-footer-inner {
