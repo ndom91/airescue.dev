@@ -1,7 +1,10 @@
 <section class="trust">
   <div class="container">
     <div class="trust-inner">
-      <span class="trust-label mono">Field Ops Since 2024</span>
+      <div class="trust-label mono">
+        <strong>2024</strong>
+        Field Notes Since
+      </div>
       <div class="trust-stats">
         <div class="trust-stat">
           <div class="num">340<span>+</span></div>
@@ -39,15 +42,30 @@
   }
 
   .trust-label {
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
+    font-size: 0.77rem;
+    text-align: left;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
     color: var(--text-dim);
-    min-width: 170px;
+    min-width: 180px;
     display: grid;
-    place-items: center;
+    align-content: end;
+    justify-items: start;
     border-right: 2px solid var(--ink);
-    padding: 0.9rem;
+    padding: 1rem 1.2rem;
+    background: var(--accent);
+  }
+
+  .trust-label strong {
+    display: block;
+    font-family: inherit;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    margin-bottom: 0.35rem;
   }
 
   .trust-stats {
