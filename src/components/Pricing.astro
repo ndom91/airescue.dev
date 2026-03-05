@@ -265,6 +265,7 @@
     align-items: center;
     justify-content: center;
     background: color-mix(in srgb, var(--surface) 90%, transparent);
+    box-shadow: 5px 5px 0 color-mix(in srgb, var(--border) 50%, transparent);
   }
 
   .pricing-footer-inner {
@@ -286,15 +287,27 @@
 
   .disclaimer {
     color: var(--text-dim);
+    text-wrap: balance;
   }
 
   .inquiry {
     color: var(--text-dim);
+    text-wrap: balance;
   }
 
   .inquiry .email {
     color: var(--text);
     border-bottom: 1px solid var(--border-strong);
+  }
+
+  @media (max-width: 720px) {
+    .pricing {
+      padding: 3rem 0 2.5rem;
+    }
+
+    .pricing-header {
+      margin-bottom: 2.5rem;
+    }
   }
 
   @media (max-width: 900px) {

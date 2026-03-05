@@ -212,6 +212,14 @@ button:focus-visible,
   .container {
     padding: 0 1.1rem;
   }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .section-header h2 {
+    font-size: clamp(2.4rem, 8vw, 4.1rem);
+  }
 }
 
 ::selection {
