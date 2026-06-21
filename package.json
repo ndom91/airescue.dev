@@ -2,6 +2,18 @@
   "name": "airescue",
   "type": "module",
   "version": "1.0.0",
+  "description": "Marketing page for hypothetical AIRescue Agency",
+  "license": "MIT",
+  "author": "ndom91 <info@airescue.dev>",
+  "homepage": "https://airescue.dev/",
+  "bugs": "https://github.com/ndom91/airescue.dev/issues",
+  "repository": "https://github.com/ndom91/airescue.dev",
+  "keywords": [
+    "agency",
+    "llm",
+    "consulting",
+    "marketing"
+  ],
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
