@@ -175,7 +175,7 @@ body::before {
 
 @keyframes fadeSlideIn {
   from {
-    opacity: 0;
+    opacity: 1;
     transform: translateY(24px);
   }
   to {

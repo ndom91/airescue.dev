@@ -3,7 +3,7 @@
     <div class="hero-grid">
       <div class="hero-copy">
         <div class="hero-eyebrow">Production-grade engineering for AI-built products</div>
-        <h1>You shipped fast.<br /><span class="dim">We'll make it last.</span></h1>
+        <h1>You shipped fast.<br /> <span class="dim">We'll make it last.</span></h1>
         <p class="hero-desc">AI tools got you to v1 fast — but now the codebase is fragile, tangled, and hard to change. We restructure and harden AI-generated code into systems your team can actually maintain. Ship your next feature with confidence, not anxiety.</p>
         <div class="hero-actions">
           <a href="#" class="btn btn-accent">Claim free assessment slot</a>
@@ -95,6 +95,7 @@
 
   .hero h1 .dim {
     display: inline-block;
+    max-width: 100%;
     padding-right: 0.06em;
     margin-right: -0.06em;
     background: linear-gradient(120deg, var(--text-dim), var(--hero-dim-end));
@@ -185,6 +186,7 @@
     line-height: 1.5;
     padding: 0.48rem 0;
     border-bottom: 1px dashed var(--border);
+    overflow-wrap: break-word;
   }
 
   .hero-console li:last-child {
@@ -239,7 +241,7 @@
     }
 
     .hero h1 .dim {
-      margin-left: 0.25em;
+      margin-left: 0;
     }
 
     .hero-actions {
