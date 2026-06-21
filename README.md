@@ -2,7 +2,7 @@
 
 Landing page for [AIrescue.dev](https://airescue.dev) — we turn AI-generated code into production-grade software.
 
-![](./.github/assets/screenshot_002.png)
+![](./.github/assets/screenshot_003.png)
 
 
 ## Development
